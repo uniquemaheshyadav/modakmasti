@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "Player": {
+      "title": "Player",
+      "description": "User profile with display name, roll id, and campus information",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "rollId": { "type": "string" },
+        "campus": { "type": "string" },
+        "campusId": { "type": "string" },
+        "campusName": { "type": "string" },
+        "avatarIcon": { "type": "string" },
+        "highScore": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["name", "campusName"]
+    },
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "Game run scores and metrics for Modak Masti",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "user_id": { "type": "string" },
+        "game": { "type": "string" },
+        "playerName": { "type": "string" },
+        "rollId": { "type": "string" },
+        "campus": { "type": "string" },
+        "campusId": { "type": "string" },
+        "campusName": { "type": "string" },
+        "score": { "type": "number" },
+        "survivalTime": { "type": "number" },
+        "modaksCaught": { "type": "number" },
+        "bestCombo": { "type": "number" },
+        "goldenModaks": { "type": "number" },
+        "timestamp": { "type": "number" },
+        "createdAt": { "type": "number" },
+        "date": { "type": "string" }
+      },
+      "required": ["playerName", "campusName", "score", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/players/{playerId}": {
+      "schema": "Player",
+      "description": "Registered player profiles"
+    },
+    "/leaderboard/{entryId}": {
+      "schema": "LeaderboardEntry",
+      "description": "Global and campus leaderboard run entries"
+    }
+  }
+}

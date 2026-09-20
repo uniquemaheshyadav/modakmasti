@@ -1,0 +1,6 @@
+{
+  "name": "Modak Masti",
+  "description": "Festive arcade game celebrating Ganesh Chaturthi — catch divine modaks, activate Modak Fever, avoid hazards, and compete on the campus leaderboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
